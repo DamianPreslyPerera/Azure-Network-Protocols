@@ -23,6 +23,7 @@ This project involves a hands-on exploration of network traffic within Microsoft
 * Inspect Network Traffic
 * Ping VMs across network
 * Experiment with Azure NSG Firewall rules to Deny/Allow network traffic
+* Use SSH protocol to access Linux VM through Windows
 
 
 ## Creating two Virtual Machines
@@ -155,11 +156,21 @@ Go back to VM1 and type in the following command
 * VM1 will continue to ping VM2 until VM2's new Firewall rule goes into effect
 * When the Firewall rule goes into effect, the ping no longer works and shows the message "Request time out"
 * This signals that your Firewall rule is working properly and is successfully blocking ICMP traffic 
+* You can remove this Firewall rule by going back to the VM2 Security Rule that was made and switching to the "Allow" action.
+
+---
 
 
+##  Using SSH protocol to access Linux VM through Windows
 
+SSH stands for Secure Shell Protocol and it is a widely used tool for securely connecting to remote servers and managing them over an unsecured network, such as the internet. It provides a secure way to access and control remote systems and is commonly used for various purposes.
 
+In order to connect to VM2 using VM1, follow these steps:
+* Open Powershell on VM1 (Windows Machine)
+* Type in "ssh labuser@10.0.05" <- This is the IP address and user name of the Linux machine
+* Enter the password that was made for VM2 (Linux Machine)
+* Gain acces to VM2 via SSH
+  
+<img width="614" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/e82eb763-69b6-4e51-839d-2ba6a7cf2658">
 
-
-
-
+You now have access to the Linux machine via VM1 through SSH on a powershell terminal.
