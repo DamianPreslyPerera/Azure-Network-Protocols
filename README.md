@@ -3,7 +3,8 @@
 
 
 # Azure Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines
-In this demonstration, I observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups
+
+This project involves a hands-on exploration of network traffic within Microsoft Azure Virtual Machines. Utilizing tools like Wireshark and experimenting with Network Security Groups, this demonstration includes the observation of various network protocols such as SSH, RDP, DNS, HTTP/S, and ICMP. The project encompasses the creation of virtual machines, the installation of Wireshark, monitoring network traffic, testing connectivity between VMs, and fine-tuning Azure NSG Firewall rules to manage and control network traffic effectively.
 
 ## Environments and Technologies Used
 * Microsoft Azure (Virtual Machines/Compute)
