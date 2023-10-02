@@ -25,4 +25,30 @@ In this demonstration, I observe various network traffic to and from Azure Virtu
 
 ## Creating two Virtual Machines
 
-Following the same steps as the ![Create a Virtual Machine](https://github.com/DamianPreslyPerera/Azure-Virtual-Machine) lab, create another virtual machine that is running a Ubunti Server Image 
+Following the same steps as the [Create a Virtual Machine](https://github.com/DamianPreslyPerera/Azure-Virtual-Machine) lab, create another virtual machine that is running a Ubuntu Server Image 
+
+<img width="1128" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/b7d9123a-65f6-4ccf-a1d4-fd5a01bb0bfe">
+
+---
+
+<img width="1128" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/0a8abb88-d9c2-4f44-9fbf-097f0333c3d6">
+
+* Chose the "VM1-vnet" virtual network, this was already created in the previous lab
+* Choose the default subnet
+* Click the "Review + Create" button
+
+---
+You should now be able to view both Virtual Machines
+* One VM is running Windows, and the other Linux
+
+<img width="1128" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/353b6807-0919-4ef5-a46f-6e5fe6400356">
+
+---
+
+Click on the newly created VM (VM2) to view its configuration settings
+* Take note of  VM's "Private IP Address"
+* You will be using this IP address within VM1 to inspect network traffic
+  
+<img width="1128" alt="Screenshot 2023-10-02 120842vm2IP" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/23ea8ac7-1513-48e3-af76-adbc27bea893">
+
+  
