@@ -20,6 +20,7 @@ In this demonstration, I observe various network traffic to and from Azure Virtu
 * Create two Virtual Machines 
 * Download Wireshark 
 * Inspect Network Traffic
+* Ping VMs across network
 * Experiment with Azure NSG Firewall rules to Deny/Allow network traffic
 
 
@@ -77,10 +78,35 @@ You will be able to view the network traffic occuring on the virtual machine
 
 <img width="752" alt="Screenshot 2023-10-02 135205wirshiperased" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/89a19cbb-f0cc-4953-a9b4-0a722704d3e5">
 
+---
 
+## Ping VMs Across Network
 
+* Now that you have set up both VMs and have Wireshark running on one VM1, we can proceed to send traffic to VM2
+* We can accomplish this by using Windows Powershell on VM1 and using the "ping" command to contact VM2
 
+### Powershell
+* Open Powershell on VM1
+* Type in the following command: ping 10.0.0.5
+* 10.0.0.5 is the IP Address of VM2
 
+<img width="613" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/1b3d1433-9614-4cfb-963e-a6eceec09289">
+
+The image shows that VM1 is able to succesfully ping VM2 and send packets to it across the network
+
+---
+### View ICMP traffic with Wireshark
+
+* Open Wireshark and type in "icmp" on the filter bar
+* Start capturing packets
+* Ping VM2 again using the ping command
+
+<img width="1065" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/9702804d-528f-47ae-abb7-e53e6690abcf">
+
+You can now view the network traffic of VM1 communicating with VM2
+* The IP Address of VM1 is 10.0.0.4
+* The IP Address of VM2 is 10.0.0.5
+* The VMs use ICMP (Internet Control Message Protocol) to communicate across the network
 
 
 
