@@ -21,3 +21,8 @@ In this demonstration, I observe various network traffic to and from Azure Virtu
 * Download Wireshark 
 * Inspect Network Traffic
 * Experiment with Azure NSG Firewall rules to Deny/Allow network traffic
+
+
+## Creating two Virtual Machines
+
+Following the same steps as the ![Create a Virtual Machine](https://github.com/DamianPreslyPerera/Azure-Virtual-Machine) lab, create another virtual machine that is running a Ubunti Server Image 
