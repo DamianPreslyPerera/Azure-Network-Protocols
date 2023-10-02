@@ -109,8 +109,51 @@ You can now view the network traffic of VM1 communicating with VM2
 * The VMs use ICMP (Internet Control Message Protocol) to communicate across the network
 
 
+## Experiment with Azure NSG Firewall rules to Deny/Allow network traffic
 
+Go back to the Azure Portal and click on the "Network Security Groups" icon
 
+<img width="1128" alt="Screenshot 2023-10-02 141353secgroup" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/ba3e3dbd-255c-4a08-a5dc-46fac32abaf8">
+
+---
+
+Click on "VM2-nsg"
+
+<img width="1128" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/3b0168b2-9824-4ef1-a61b-f8f80db3775f">
+
+---
+
+Click on "Inbound Security Rules"
+
+<img width="1128" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/2d84d9c4-9f60-4142-baa9-9a215c69b06c">
+
+---
+
+Click on "Add" to create a new Firewall Secuirty rule
+
+<img width="1128" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/a65fa860-deef-4ebb-ace2-13e8a9996435">
+
+---
+
+* Choose the "ICMP" Protocol
+* Choose "Deny" Action
+* Set "Priority" to 20
+* Name the rule "DenyAnyICMPInbound"
+* Click "Add/Save"
+
+<img width="439" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/57b20e03-d854-418b-9eef-894b02bea219">
+
+---
+
+Go back to VM1 and type in the following command
+* ping 10.0.0.5 -t
+* This command continously pings the given IP address
+
+<img width="1067" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/68fd616c-fc06-4035-98a1-5b7066001620">
+
+* VM1 will continue to ping VM2 until VM2's new Firewall rule goes into effect
+* When the Firewall rule goes into effect, the ping no longer works and shows the message "Request time out"
+* This signals that your Firewall rule is working properly and is successfully blocking ICMP traffic 
 
 
 
