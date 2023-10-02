@@ -51,4 +51,45 @@ Click on the newly created VM (VM2) to view its configuration settings
   
 <img width="1128" alt="Screenshot 2023-10-02 120842vm2IP" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/23ea8ac7-1513-48e3-af76-adbc27bea893">
 
-  
+---
+
+## Installing & Using Wireshark
+
+Navigate to VM1 (The virtual machine running Windows)
+* [Download Wireshark](https://www.wireshark.org/download.html)
+* Click through the Wireshark installer prompts
+* Open Wireshark after installation completes
+
+<img width="373" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/ed85de76-2963-4421-a401-1db8869eb4e9">
+
+---
+
+Your Wireshark Application should look like this
+
+<img width="751" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/7ff832fb-f435-47d5-8ecf-bef227887a51">
+
+--- 
+In order to start inspecting network traffic
+* Choose the "Ethernet Adapter"
+* Click on the Blue icon to start analyzer
+
+You will be able to view the network traffic occuring on the virtual machine
+
+<img width="752" alt="Screenshot 2023-10-02 135205wirshiperased" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/89a19cbb-f0cc-4953-a9b4-0a722704d3e5">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
