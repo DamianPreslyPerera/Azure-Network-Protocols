@@ -110,6 +110,7 @@ You can now view the network traffic of VM1 communicating with VM2
 * The IP Address of VM2 is 10.0.0.5
 * The VMs use ICMP (Internet Control Message Protocol) to communicate across the network
 
+---
 
 ## Experiment with Azure NSG Firewall rules to Deny/Allow network traffic
 
