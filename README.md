@@ -174,3 +174,45 @@ In order to connect to VM2 using VM1, follow these steps:
 <img width="614" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/e82eb763-69b6-4e51-839d-2ba6a7cf2658">
 
 You now have access to the Linux machine via VM1 through SSH on a powershell terminal.
+
+---
+
+### Observing SSH Traffic using Wireshark
+
+Typing in Linux commands into the powershell after connecting to the Linux VM allows the user to view SSH traffic over the network
+* To view SSH traffic, typ in "SSH" as a filter into Wirehsark
+* SSH Traffic can now be viewed
+
+<img width="1111" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/b271633e-52ce-4e06-95d1-1ab338d887fb">
+
+You can exit the SSH connection to the Linux VM by typing in "exit" within the powershell
+
+<img width="183" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/cf41fb6e-e4e6-455e-8d35-a2df47a34af5">
+
+---
+
+### Observing DHCP Traffic
+
+DHCP (Dynamic Host Configuration Protocol) traffic refers to the network communication that occurs between client devices and DHCP servers in order to dynamically assign IP addresses and other network configuration parameters to the clients. DHCP is a protocol used to automate the process of IP address allocation and network configuration in TCP/IP-based networks.
+
+We can view DHCP traffic by using Wireshark as well
+
+To view DHCP traffic:
+* Issue a new IP address for the Windows VM by using the "ipconfig/renew" command
+* Set the Wireshark filter to "DHCP"
+* Observe the DHCP traffic appearing in Wireshark
+
+<img width="1105" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/662a0e67-657b-442e-aa8f-fc08c94f3004">
+
+
+
+
+
+
+
+
+
+
+
+
+
