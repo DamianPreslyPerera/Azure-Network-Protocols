@@ -204,12 +204,36 @@ To view DHCP traffic:
 
 <img width="1105" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/662a0e67-657b-442e-aa8f-fc08c94f3004">
 
+---
 
+### Observing DNS Traffic
 
+DNS (Domain Name System) traffic refers to the network communication associated with the resolution of domain names to IP addresses and vice versa. DNS is a fundamental protocol used on the internet and within private networks to translate human-readable domain names (e.g., www.google.com) into IP addresses (e.g., 192.0.2.1) that computers and networking equipment can understand. DNS traffic consists of various types of DNS queries and responses exchanged between DNS clients (devices like computers and smartphones) and DNS servers (which provide the translation service).
 
+We can view DNS traffic by using Wireshark as well
 
+To view DNS traffic:
+* Use the "nslookup" command to look up the IP address of any website (such as www.google.com) from within the Windows powershell
+* Set the Wireshark filter to "DNS"
+* Observe the DNS traffic appearing in Wireshark
 
+<img width="1106" alt="image" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/5084ef9b-b7a1-4989-a836-821ebb704127">
 
+---
+
+### Observing RDP Traffic
+
+RDP (Remote Desktop Protocol) traffic refers to the network communication protocol used to establish a remote desktop connection between a client computer and a remote server or workstation. RDP allows a user to control and interact with a remote computer's graphical desktop, applications, and resources as if they were physically present at the remote machine. It is commonly used for remote administration, technical support, and remote desktop access in various IT and business scenarios.
+
+We can view RDP traffic by using Wireshark as well
+
+To view RDP traffic:
+* Type in "tcp.port == 3389" into the Wireshark capture filter
+* Port 3389 is the port used for RDP
+* Wireshark will no display all RDP traffic across the network
+* The traffic is continous because RDP is used to trasnmit the visual and functional components of the Azure virtual machine to my local computer as well as transmit my input to the Azure VM
+
+  <img width="751" alt="Screenshot 2023-10-02 232559rdpip" src="https://github.com/DamianPreslyPerera/Azure-Network-Protocols/assets/89204562/273fea70-d698-4894-9fe0-7c73b6c88441">
 
 
 
